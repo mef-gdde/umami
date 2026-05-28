@@ -1,4 +1,6 @@
+#!/usr/bin/env bash
+
 docker buildx build \
   --platform linux/amd64,linux/arm64 \
-  -t umami:latest \
+  -t ${REGISTRY:+${REGISTRY}/}umami:latest \
   .
